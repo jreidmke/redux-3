@@ -5,9 +5,9 @@ function List() {
     const pKeys = Object.keys(data.products);
     return(
         <div>
-            <h1>HEY ASSHOLE, LOOK WHAT'S IN YOUR CART!</h1>
+            <h1>HEY MAN, LOOK WHAT'S IN YOUR CART!</h1>
             {pKeys.map(k => 
-                <Product p={data.products[k]}/>
+                <Product key={k} p={data.products[k]} uuid={k}/>
             )}
         </div>
     )
